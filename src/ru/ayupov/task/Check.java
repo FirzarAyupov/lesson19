@@ -9,14 +9,13 @@ import java.util.Formatter;
 public class Check {
     private List<Product> products;
 
-    Check(File productsList) {
+    void createFromFile(File productsList) {
         try (Scanner sc = new Scanner(productsList)) {
             this.products = new ArrayList<>();
             while (sc.hasNextLine()) {
                 Product product = new Product(sc.nextLine(), Double.parseDouble(sc.nextLine()), Double.parseDouble(sc.nextLine()));
                 this.products.add(product);
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }

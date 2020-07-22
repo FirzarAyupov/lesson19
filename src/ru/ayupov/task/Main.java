@@ -22,7 +22,8 @@ import java.io.File;
 public class Main {
     public static void main(String[] args) {
 
-        Check check = new Check(new File("products.txt"));
+        Check check = new Check();
+        check.createFromFile(new File("products.txt"));
         check.printCheck();
     }
 }
