@@ -9,7 +9,7 @@ import java.util.Formatter;
 public class Check {
     private List<Product> products;
 
-    void createFromFile(File productsList) {
+    void initFromFile(File productsList) {
         try (Scanner sc = new Scanner(productsList)) {
             this.products = new ArrayList<>();
             while (sc.hasNextLine()) {
